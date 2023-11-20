@@ -29,7 +29,7 @@ img{
     font-size: 20px;
 }
 .logo span{
-    color: orange;
+    color: red;
 }
 .hamburguesa{
     width: 30px;
@@ -85,15 +85,15 @@ img{
    font-weight: 700; 
 }
 .navegacion li:last-child a:last-child{
-    background-color: orange;
+    background-color: red;
     color: white;
     padding: 5px;
     border-radius: 10px;
-    border: 1px solid orange;
+    border: 1px solid red;
 }
 .navegacion li:last-child a:last-child:hover{
     background-color: white;
-    color: orange;
+    color: red;
 }
 /* Información Banner */
 .presentacion{
@@ -124,8 +124,8 @@ img{
 }
 .informacion--boton button{
     padding: 10px;
-    background-color: orange;
-    border: 1px solid orange;
+    background-color: red;
+    border: 1px solid red;
     color: white;
     border-radius: 10px;
     font-weight: 700;
@@ -133,7 +133,7 @@ img{
 }
 .informacion--boton button:hover{
     background-color: white;
-    color: orange;
+    color: red;
     cursor: pointer;
 }
 /* Información imagen */
@@ -207,7 +207,7 @@ img{
 }
 .plato--info{
     width: 100%;
-    display: flex;
+    
     align-items: center;
     gap: 15px;
     justify-content: space-between;
@@ -216,7 +216,7 @@ img{
     font-weight: 900;
 }
 .plato--info button{
-    background-color: orange;
+    background-color: red;
     color: white;
     font-weight: 900;
     padding: 5px 12px;
