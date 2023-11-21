@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header class="header">
+
+            <div class="logo">
+                <span>ANTOJITOS</span>
+                <p>PANZA LLENA</p>
+                <span>CORAZÓN CONTENTO</span>
+            </div>
+            
+            <nav class="menu">
+                <ul class="navegacion">
+                    <li ><a href="index.html">Menú</a></li>
+
+                    <li ><a href="horarios.html">Horarios</a></li>
+
+                </ul>
+            </nav>
+
+            <a  onclick ="openNav()" class="mm2" ><button class="btnm2">Menú</button></a>
+
+            <div class="overlay" id="mobile-menu">
+                <a onclick="closeNav()" class="close" href="">&times;</a>
+                <div class="overlay-content">
+                    <a  href="index.html">Menú</a>
+                    <a href="">Horarios</a>
+                </div>
+            </div>
+
+        </header>
+        <aside class="presentacion">
+            <div class="informacion">
+                <h1>Nuestros horarios de atención</h1>
+                <div>
+                    <p>A continuación puedes consultar nuestros horarios de atención</p>
+                    
+                </div>
+                <!-- <div class="informacion--boton">
+                    <button type="button">Explorar Comida</button>
+                </div> -->
+            </div>
+            <div class="presentacion--imagen">
+                <img src="Imagenes/design.png" alt="Imagen presentacion">
+            </div>
+        </aside>
+
+        <main class="comida">
+            <!-- <h2 class="comida--titulo">Platos disponibles</h2> -->
+
+            <div class="card">
+                <div class="card-header">
+                  <h3>Horarios de atención</h3>
+                </div>
+                <div class="card-body">
+                  <ul >
+                    <li>
+                      <strong>Martes a viernes</strong>
+                      <p>8:30 a.m. - 9:00 p.m.</p>
+                    </li>
+                    <li>
+                      <strong>Sábados y domingos</strong>
+                      <p>9:00 a.m. - 9:00 p.m.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+
+
+           
+        </main>
+    </div>
+    <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>

@@ -302,12 +302,50 @@ img{
 @media screen and (max-height:450px){
     .header .overlay a{
         font-size: 20px;
+
     }
 
     .header .overlay .close{
         font-size: 40px;
         top: 15px;
         right: 35px;
+        
     }
 }
 
+
+
+/* card horarios de atencion */
+.card {
+    width: auto;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+
+   
+  }
+
+  .card-header {
+    background-color: #f7f7f7;
+    padding: 10px 0;
+  }
+  
+  .card-body {
+    padding: 10px;
+    font-size: larger;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  strong {
+    font-weight: bold;
+    font-size:medium;
+  }
