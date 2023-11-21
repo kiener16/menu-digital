@@ -11,24 +11,32 @@
 <body>
     <div class="contenedor">
         <header class="header">
+
             <div class="logo">
                 <span>ANTOJITOS</span>
                 <p>PANZA LLENA</p>
                 <span>CORAZÓN CONTENTO</span>
             </div>
-            <div class="hamburguesa">
-                <img src="Imagenes/menu.png" alt="Menu hamburguesa">
-            </div>
+            
             <nav class="menu">
                 <ul class="navegacion">
-                    <!-- <li><a href="index.html">Inicio</a></li> -->
-                    <!-- <li><a href="#">Menu</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Galeria</a></li>
-                    <li><a href="#">Iniciar Session</a><a href="#">Registrar</a></li> -->
+                    <li ><a href="index.html">Menú</a></li>
+
+                    <li ><a href="#">Horarios</a></li>
+
                 </ul>
             </nav>
+
+            <a  onclick ="openNav()" class="mm2" href="#"><button class="btnm2">Menú</button></a>
+
+            <div class="overlay" id="mobile-menu">
+                <a onclick="closeNav()" class="close" href="">&times;</a>
+                <div class="overlay-content">
+                    <a  href="index.html">Menú</a>
+                    <a href="">Horarios</a>
+                </div>
+            </div>
+
         </header>
         <aside class="presentacion">
             <div class="informacion">
@@ -96,5 +104,6 @@
             </div>
         </main>
     </div>
+    <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
