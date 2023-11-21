@@ -349,3 +349,13 @@ img{
     font-weight: bold;
     font-size:medium;
   }
+
+
+
+  /* Categorias */
+  .categorias{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: 15px;
+  }
