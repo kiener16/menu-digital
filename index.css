@@ -85,20 +85,18 @@ img{
     align-items: center;
     gap: 15px;
 }
-.navegacion li:last-child a{
-   font-weight: 700; 
+.navegacion a{
+   font-weight: 600; 
+
 }
 .navegacion li:first-child a:first-child{
     background-color: red;
     color: white;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
-    border: 1px solid red;
+    
 }
-.navegacion li:last-child a:last-child:hover{
-    background-color: white;
-    color: red;
-}
+
 /* Información Banner */
 .presentacion{
     width: 90%;
@@ -201,7 +199,7 @@ img{
     border: 1px solid rgba(196, 196, 196, 0.426);
 }
 .plato img{
-    width: 150px;
+    width: 100px;
     filter: drop-shadow(0 0 0.9rem orange);
     margin-top: -85px;
 }
@@ -279,7 +277,7 @@ img{
 
 .header .overlay a{
     padding: 15px;
-    font-size: 36px;
+    font-size: 25px;
     display: block;
     transition: all 0.3s 0s;
     font-weight: 700;
@@ -325,15 +323,9 @@ img{
    
   }
 
-  .card-header {
-    background-color: #f7f7f7;
-    padding: 10px 0;
-  }
   
-  .card-body {
-    padding: 10px;
-    font-size: larger;
-  }
+  
+ 
 
   ul {
     list-style-type: none;
