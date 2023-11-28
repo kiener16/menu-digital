@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Horarios</title>
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="index.css" />
+    
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
+    <!-- loader -->
+    <div class="loader"></div>
+    <!-- Loader -->
     <div class="contenedor">
       <header class="header">
         <div class="logo">
@@ -21,6 +24,7 @@
           <ul class="navegacion">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="hamburguesas.html">Hamburguesas</a></li>
+            <li><a href="preparados.html">Preparados</a></li>
             <li><a href="horarios.html">Horarios</a></li>
           </ul>
         </nav>
@@ -34,27 +38,21 @@
           <div class="overlay-content">
             <a href="index.html">Inicio</a>
             <a href="hamburguesas.html">Hamburguesas</a>
+            <a href="preparados.html">Preparados</a>
             <a href="horarios.html">Horarios</a>
           </div>
         </div>
       </header>
-      <aside class="presentacion">
-        <div class="informacion">
-          <h1>Nuestros horarios de atención</h1>
-        </div>
-        <!-- <div class="presentacion--imagen">
-          <img src="Imagenes/design.png" alt="Imagen presentacion" />
-        </div> -->
-      </aside>
+      
 
       <main class="comida">
         <!-- <h2 class="comida--titulo">Platos disponibles</h2> -->
 
-        <div class="plato">
-          <div class="card-header">
-            <h3>Horarios de atención</h3>
+        <div class="platos">
+          <div class="plato">
+            <h3>Nuestros horarios de atención</h3>
           </div>
-          <div class="card-body">
+          <div class="plato">
             <ul>
               <li>
                 <strong>Martes a viernes</strong>
@@ -67,8 +65,29 @@
             </ul>
           </div>
         </div>
+        
       </main>
+
+      
     </div>
+
+
+    
+      <img style="width: 100%;"
+        src="Imagenes/design.png"
+        alt="Imagen presentacion"
+      />
+    
+
+
     <script type="text/javascript" src="js/scripts.js"></script>
+    <!-- Imagen de carga -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(window).load(function () {
+        $(".loader").fadeOut("slow");
+      });
+    </script>
+    <!-- imagen de carga -->
   </body>
 </html>

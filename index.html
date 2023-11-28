@@ -1,131 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicio</title>
-    <!-- <link rel="stylesheet" href="normalize.css" /> -->
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <div class="loader"></div>
-<!-- Loader -->
-<h1>coocinkg</h1>
-.cooking
-  - for (var i = 0; i < 5; i++)
-    .bubble
-  #area
-    #sides
-      #pan
-      #handle
-    #pancake
-      #pastry
-<!-- Loader -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio</title>
+  <!-- <link rel="stylesheet" href="normalize.css" /> -->
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <!-- loader -->
+  <div class="loader"></div>
+  <!-- Loader -->
 
 
 
-    <div class="contenedor">
-      <header class="header">
-        <div class="logo">
-          <span>ANTOJITOS</span>
-          <p>PANZA LLENA</p>
-          <span>CORAZÓN CONTENTO</span>
 
+  <div class="contenedor">
+    <header class="header">
+      <div class="logo">
+        <span>ANTOJITOS</span>
+        <p>PANZA LLENA</p>
+        <span>CORAZÓN CONTENTO</span>
+
+      </div>
+
+      <nav class="menu">
+        <ul class="navegacion">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="hamburguesas.html">Hamburguesas</a></li>
+          <li><a href="preparados.html">Preparados</a></li>
+          <li><a href="horarios.html">Horarios</a></li>
+        </ul>
+      </nav>
+
+      <a onclick="openNav()" class="mm2"><button class="btnm2">Menú</button></a>
+
+      <div class="overlay" id="mobile-menu">
+        <a onclick="closeNav()" class="close" href="">&times;</a>
+        <div class="overlay-content">
+          <a href="index.html">Inicio</a>
+          <a href="hamburguesas.html">Hamburguesas</a>
+          <a href="preparados.html">Preparados</a>
+          <a href="horarios.html">Horarios</a>
         </div>
+      </div>
+    </header>
 
-        <nav class="menu">
-          <ul class="navegacion">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="hamburguesas.html">Hamburguesas</a></li>
-            <li><a href="horarios.html">Horarios</a></li>
-          </ul>
-        </nav>
-
-        <a onclick="openNav()" class="mm2"
-          ><button class="btnm2">Menú</button></a
-        >
-
-        <div class="overlay" id="mobile-menu">
-          <a onclick="closeNav()" class="close" href="">&times;</a>
-          <div class="overlay-content">
-            <a href="index.html">Inicio</a>
-            <a href="hamburguesas.html">Hamburguesas</a>
-            <a href="horarios.html">Horarios</a>
-          </div>
-        </div>
-      </header>
-      
-      <aside class="presentacion">
-        <div class="informacion">
-          <!-- <h1>Nuestro delicioso menú</h1> -->
-          <!-- <div>
+    <aside class="presentacion">
+      <div class="informacion">
+        <!-- <h1>Nuestro delicioso menú</h1> -->
+        <!-- <div>
             <p>
               Aquí puedes ver nuestro delicioso menú y comprar tu comida
               favorita.
             </p>
           </div> -->
-          
-        </div>
-        <!-- <div class="presentacion--imagen">
+
+      </div>
+      <!-- <div class="presentacion--imagen">
           <img src="Imagenes/design.png" alt="Imagen presentacion" />
         </div> -->
-      </aside>
+    </aside>
 
-      <main class="comida">
-        <!-- <h2 class="comida--titulo">Platos disponibles</h2> -->
+    <main class="comida">
+      <!-- <h2 class="comida--titulo">Platos disponibles</h2> -->
 
-        <div class="platos">
-          <!-- Categorias -->
+      <div class="platos">
+        <!-- Categorias -->
 
-          <a class="categorias" href="hamburguesas.html">
-            <article class="plato">
-              <img src="Imagenes/categorias/hamburguesas/hamburguesa1-sin-borde.jpg" alt="Hamburguesa" />
-              <h1>Hamburguesas</h1>
-            </article>
-          </a>
+        <a class="categorias" href="hamburguesas.html">
+          <article class="plato">
+            <img src="Imagenes/categorias/hamburguesas/hamburguesa1-sin-borde.jpg" alt="Hamburguesa" />
+            <h1>Hamburguesas</h1>
+          </article>
+        </a>
 
-          <a class="categorias" href="#">
-            <article class="plato">
-              <img src="Imagenes/categorias/asados/asado_pollo_sin_borde_1.jpg" alt="Hamburguesa" />
-              <h1>Asados</h1>
-            </article>
-          </a>
+        <a class="categorias" href="#">
+          <article class="plato">
+            <img src="Imagenes/categorias/asados/asado_pollo_sin_borde_1.jpg" alt="Hamburguesa" />
+            <h1>Asados</h1>
+          </article>
+        </a>
 
-          <a class="categorias" href="#">
-            <article class="plato">
-              <img src="Imagenes/categorias/micheladas/michelada-1.jpg" alt="Hamburguesa" />
-              <h1>Micheladas</h1>
-            </article>
-          </a>
+        <a class="categorias" href="preparados.html">
+          <article class="plato">
+            <img src="Imagenes/categorias/preparados/michelada-1.jpg" alt="Hamburguesa" />
+            <h1>Preparados</h1>
+          </article>
+        </a>
 
-          <!-- Categorias -->
-        </div>
-        
-      </main>
+        <!-- Categorias -->
+      </div>
+
+    </main>
+
+
+
+  </div>
+
+  <footer class="footer">
+    <p>Copyright © 2023 Antojitos Panza Llena Corazón Contento</p>
+    <p>Designed by Kiener Maldonado</p>
+    <a href="mailto: kienerz16@gmail.com">
+
+      <p>kienerz16@gmail.com</p>
       
+  </footer>
 
-      
-    </div>
+  <script type="text/javascript" src="js/scripts.js"></script>
 
-    <footer class="footer">
-      <p>Copyright © 2023 Antojitos Panza Llena Corazón Contento</p>
-      <p>Designed by Kiener Maldonado</p>
-        <a href="mailto: kienerz16@gmail.com">
-          
-          <p>kienerz16@gmail.com</p>
-          <a href="https://wa.me/+50255924602"><img class="footer-logos" src="Imagenes/WhatsApp-logo.png" alt=""></a>
-    </footer>
+  <!-- Imagen de carga -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(window).load(function () {
+      $(".loader").fadeOut("slow");
+    });
+  </script>
+  <!-- imagen de carga -->
+</body>
 
-    <script type="text/javascript" src="js/scripts.js"></script>
-
-    <!-- Imagen de carga -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript">
-      $(window).load(function () {
-        $(".loader").fadeOut("slow");
-      });
-    </script>
-    <!-- imagen de carga -->
-  </body>
 </html>
