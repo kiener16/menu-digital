@@ -168,7 +168,8 @@ img {
 .platos {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 85px;
+  row-gap: 24px; 
+  /* Distancia entre las tarjetas */
 }
 @media (min-width: 768px) {
   .platos {
