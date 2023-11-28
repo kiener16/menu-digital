@@ -1,93 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panes</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="loader"></div>
     <div class="contenedor">
-        <header class="header">
+      <header class="header">
+        <div class="logo">
+          <span>ANTOJITOS</span>
+          <p>PANZA LLENA</p>
+          <span>CORAZÓN CONTENTO</span>
+        </div>
 
-            <div class="logo">
-                <span>ANTOJITOS</span>
-                <p>PANZA LLENA</p>
-                <span>CORAZÓN CONTENTO</span>
-            </div>
-            
-            <nav class="menu">
-                <ul class="navegacion">
-                    <li ><a href="index.html">Inicio</a></li>
-                    <li><a href="hamburguesas.html">Panes</a></li>
-                    <li ><a href="horarios.html">Horarios</a></li>
+        <nav class="menu">
+          <ul class="navegacion">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="hamburguesas.html">Hamburguesas</a></li>
+            <li><a href="horarios.html">Horarios</a></li>
+          </ul>
+        </nav>
 
-                </ul>
-            </nav>
+        <a onclick="openNav()" class="mm2"
+          ><button class="btnm2">Menú</button></a
+        >
 
-            <a  onclick ="openNav()" class="mm2" ><button class="btnm2">Menú</button></a>
+        <div class="overlay" id="mobile-menu">
+          <a onclick="closeNav()" class="close" href="">&times;</a>
+          <div class="overlay-content">
+            <a href="index.html">Inicio</a>
+            <a href="hamburguesas.html">Hamburguesas</a>
+            <a href="horarios.html">Horarios</a>
+          </div>
+        </div>
+      </header>
+      <aside class="presentacion">
+        <div class="informacion">
+          <h1>Menu de panes, hamburguesas, hotdogs.</h1>
 
-            <div class="overlay" id="mobile-menu">
-                <a onclick="closeNav()" class="close" href="">&times;</a>
-                <div class="overlay-content">
-                    <a  href="index.html">Inicio</a>
-                    <a href="hamburguesas.html">Hamburguesas</a>
-                    <a href="horarios.html">Horarios</a>
-                </div>
-            </div>
-
-        </header>
-        <aside class="presentacion">
-            <div class="informacion">
-                <h1>Menu de panes, hamburguesas, hotdogs.</h1>
-                
-                <!-- <div class="informacion--boton">
+          <!-- <div class="informacion--boton">
                     <button type="button">Explorar Comida</button>
                 </div> -->
+        </div>
+        <div class="presentacion--imagen">
+          <img
+            src="Imagenes/categorias/hamburguesas/hotdog-2-sin-borde.jpg"
+            alt="Imagen presentacion"
+          />
+        </div>
+      </aside>
+      <br /><br /><br />
+      <main class="comida">
+        <div class="platos">
+          <article class="plato">
+            <img
+              src="Imagenes/categorias/hamburguesas/hotdog-2-sin-borde.jpg"
+              alt="Hamburguesa"
+            />
+            <h1>HOT DOG</h1>
+            <p>
+              Hot Dog de salchichas con lechuga y repollo. Puedes pedirlo
+              acompañado con papas o puedes pedirlo simple.
+            </p>
+            <div class="plato--info">
+              <p>Sin papas: Q 10</p>
+              <hr />
+              <p>Con papas: Q 15</p>
             </div>
-            <div class="presentacion--imagen">
-                <img src="Imagenes/categorias/hamburguesas/hotdog-2-sin-borde.jpg" alt="Imagen presentacion">
+          </article>
+
+          <article class="plato">
+            <img
+              src="Imagenes/categorias/hamburguesas/hamburguesa1-sin-borde.jpg"
+              alt="Hamburguesa"
+            />
+            <h1>HAMBURGUESA</h1>
+            <p>
+              Hamburguesa de res con lechuga, queso, tomate, cebolla. Puedes
+              pedirla acompañada con papas o puedes pedirla simple.
+            </p>
+            <div class="plato--info">
+              <p>Sin papas: Q 10</p>
+              <hr />
+              <p>Con papas: Q 15</p>
             </div>
-        </aside>
-<br><br><br>
-        <main class="comida">
-            
-
-            <div class="platos">
-
-               
-
-                <article class="plato">
-                    <img src="Imagenes/categorias/hamburguesas/hotdog-2-sin-borde.jpg" alt="Hamburguesa">
-                    <h1>HOT DOG</h1>
-                    <p>Hot Dog de salchichas con lechuga y repollo. Puedes pedirlo 
-                        acompañado con papas o puedes pedirlo simple.</p>
-                    <div class="plato--info">
-                        <p>Sin papas: Q 10</p> <hr>
-                        <p>Con papas: Q 15</p>
-                    </div>                    
-                </article>
-
-
-                <article class="plato">
-                    <img src="Imagenes/categorias/hamburguesas/hamburguesa1-sin-borde.jpg" alt="Hamburguesa">
-                    <h1>HAMBURGUESA</h1>
-                    <p>Hamburguesa de res con lechuga, queso, tomate, cebolla. Puedes pedirla acompañada
-                        con papas o puedes pedirla simple.
-                    </p>
-                    <div class="plato--info">
-                        <p>Sin papas: Q 10</p> <hr>
-                        <p>Con papas: Q 15</p>
-                    </div>                    
-                </article>
-
-                
-                
-            </div>
-        </main>
+          </article>
+        </div>
+      </main>
     </div>
     <script type="text/javascript" src="js/scripts.js"></script>
-</body>
+
+    <!-- Imagen de carga -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(window).load(function () {
+        $(".loader").fadeOut("slow");
+      });
+    </script>
+    <!-- imagen de carga -->
+  </body>
 </html>
