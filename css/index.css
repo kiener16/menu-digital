@@ -8,8 +8,8 @@
 
 body{
   /* background-color: rgb(151, 10, 238); */
-  background-image: url(weds.webp);
-  background-size: contain;
+  background-image: url(oso.gif );
+  background-size:15%;
   background-repeat: repeat;
   /* background-color: #FCF3CF; */
 }
@@ -43,7 +43,7 @@ img {
   filter: drop-shadow(0 0.9mm 0.2mm black);
 }
 .logo p{
-  filter: drop-shadow(0 0.9mm 0.2mm red);
+  
   color: black;
 }
 
