@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Horarios</title>
-    
+
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
@@ -30,8 +30,11 @@
         </nav>
 
         <a onclick="openNav()" class="mm2"
-          ><button class="btnm2">Menú</button></a
-        >
+          ><button class="btnm2">
+            <div class="menuicon"></div>
+            <div class="menuicon"></div>
+            <div class="menuicon"></div></button
+        ></a>
 
         <div class="overlay" id="mobile-menu">
           <a onclick="closeNav()" class="close" href="">&times;</a>
@@ -43,7 +46,6 @@
           </div>
         </div>
       </header>
-      
 
       <main class="comida">
         <!-- <h2 class="comida--titulo">Platos disponibles</h2> -->
@@ -65,20 +67,14 @@
             </ul>
           </div>
         </div>
-        
       </main>
-
-      
     </div>
 
-
-    
-      <img style="width: 100%;"
-        src="Imagenes/design.png"
-        alt="Imagen presentacion"
-      />
-    
-
+    <img
+      style="width: 100%"
+      src="Imagenes/design.png"
+      alt="Imagen presentacion"
+    />
 
     <script type="text/javascript" src="js/scripts.js"></script>
     <!-- Imagen de carga -->

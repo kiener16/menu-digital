@@ -1,109 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Preparadas</title>
-    <!-- <link rel="stylesheet" href="normalize.css"> -->
-    <link rel="stylesheet" href="css/index.css" />
-  </head>
-  <body>
-    <div class="loader"></div>
-    <div class="contenedor">
-      <header class="header">
-        <div class="logo">
-          <span>ANTOJITOS</span>
-          <p>PANZA LLENA</p>
-          <span>CORAZÓN CONTENTO</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preparadas</title>
+  <!-- <link rel="stylesheet" href="normalize.css"> -->
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <div class="loader"></div>
+  <div class="contenedor">
+    <header class="header">
+      <div class="logo">
+        <span>ANTOJITOS</span>
+        <p>PANZA LLENA</p>
+        <span>CORAZÓN CONTENTO</span>
+      </div>
+
+      <nav class="menu">
+        <ul class="navegacion">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="hamburguesas.html">Hamburguesas</a></li>
+          <li><a href="preparados.html">Preparados</a></li>
+          <li><a href="horarios.html">Horarios</a></li>
+        </ul>
+      </nav>
+
+      <a onclick="openNav()" class="mm2"><button class="btnm2">
+          <div class="menuicon"></div>
+          <div class="menuicon"></div>
+          <div class="menuicon"></div>
+        </button></a>
+
+      <div class="overlay" id="mobile-menu">
+        <a onclick="closeNav()" class="close" href="">&times;</a>
+        <div class="overlay-content">
+          <a href="index.html">Inicio</a>
+          <a href="hamburguesas.html">Hamburguesas</a>
+          <a href="preparados.html">Preparados</a>
+          <a href="horarios.html">Horarios</a>
         </div>
+      </div>
+    </header>
+    <aside class="presentacion">
+      <div class="informacion">
+        <h1>Menu de micheladas y picositas.</h1>
 
-        <nav class="menu">
-          <ul class="navegacion">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="hamburguesas.html">Hamburguesas</a></li>
-            <li><a href="preparados.html">Preparados</a></li>
-            <li><a href="horarios.html">Horarios</a></li>
-          </ul>
-        </nav>
-
-        <a onclick="openNav()" class="mm2"
-          ><button class="btnm2">Menú</button></a
-        >
-
-        <div class="overlay" id="mobile-menu">
-          <a onclick="closeNav()" class="close" href="">&times;</a>
-          <div class="overlay-content">
-            <a href="index.html">Inicio</a>
-            <a href="hamburguesas.html">Hamburguesas</a>
-            <a href="preparados.html">Preparados</a>
-            <a href="horarios.html">Horarios</a>
-          </div>
-        </div>
-      </header>
-      <aside class="presentacion">
-        <div class="informacion">
-          <h1>Menu de micheladas y picositas.</h1>
-
-          <!-- <div class="informacion--boton">
+        <!-- <div class="informacion--boton">
                     <button type="button">Explorar Comida</button>
                 </div> -->
-        </div>
-        <!-- <div class="presentacion--imagen">
+      </div>
+      <!-- <div class="presentacion--imagen">
           <img
             src="Imagenes/categorias/preparados/michelada-1.jpg"
             alt="Imagen presentacion"
           />
         </div> -->
-      </aside>
-     
-      <main class="comida">
-        <div class="platos">
-          <article class="plato">
-            <img
-              src="Imagenes/categorias/preparados/picosita-1.jpg"
-              alt="picosita"
-            />
-            <h1>PICOSITA</h1>
-            <p>
-              Una gallo bien fria con un preparado especial, acompañado de camarones y manis.
-            </p>
-            <div class="plato--info">
-              <p>Gallo de 8 onzas: <span>Q20</span></p>
-              <hr />
-              <p>Gallo de 16 onzas: <span>Q30</span></p>
-            </div>
-          </article>
+    </aside>
 
+    <main class="comida">
+      <div class="platos">
+        <article class="plato">
+          <img src="Imagenes/categorias/preparados/picosita-1.jpg" alt="picosita" />
+          <h1>PICOSITA</h1>
+          <p>
+            Una gallo bien fria con un preparado especial, acompañado de
+            camarones y manis.
+          </p>
+          <div class="plato--info">
+            <p>Gallo de 8 onzas: <span>Q20</span></p>
+            <hr />
+            <p>Gallo de 16 onzas: <span>Q30</span></p>
+          </div>
+        </article>
 
-          <article class="plato">
-            <img
-              src="Imagenes/categorias/preparados/michelada-1.jpg"
-              alt="michelada"
-            />
-            <h1>MICHELADA</h1>
-            <p>
-              Una deliciosa michelada con una preparación especial, puedes pedirla simple o una super michelada acompañada
-              con camaron y manis.
-            </p>
-            <div class="plato--info">
-              <p>Michelada simple: <span>Q20</span></p>
-              <hr />
-              <p>Super michelada: <span>Q25</span></p>
-            </div>
-          </article>
-        </div>
-      </main>
-    </div>
-    <script type="text/javascript" src="js/scripts.js"></script>
+        <article class="plato">
+          <img src="Imagenes/categorias/preparados/michelada-1.jpg" alt="michelada" />
+          <h1>MICHELADA</h1>
+          <p>
+            Una deliciosa michelada con una preparación especial, puedes
+            pedirla simple o una super michelada acompañada con camaron y
+            manis.
+          </p>
+          <div class="plato--info">
+            <p>Michelada simple: <span>Q20</span></p>
+            <hr />
+            <p>Super michelada: <span>Q25</span></p>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+  <script type="text/javascript" src="js/scripts.js"></script>
 
-    <!-- Imagen de carga -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript">
-      $(window).load(function () {
-        $(".loader").fadeOut("slow");
-      });
-    </script>
-    <!-- imagen de carga -->
-  </body>
+  <!-- Imagen de carga -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(window).load(function () {
+      $(".loader").fadeOut("slow");
+    });
+  </script>
+  <!-- imagen de carga -->
+</body>
+
 </html>

@@ -21,10 +21,12 @@
   <div class="contenedor">
     <header class="header">
       <div class="logo">
+        <a href="index.html">
         <span>ANTOJITOS</span>
         <p>PANZA LLENA</p>
         <span>CORAZÓN CONTENTO</span>
-
+      </a>
+      <span class="navbar-toggler-icon"></span>
       </div>
 
       <nav class="menu">
@@ -36,7 +38,11 @@
         </ul>
       </nav>
 
-      <a onclick="openNav()" class="mm2"><button class="btnm2">Menú</button></a>
+      <a onclick="openNav()" class="mm2"><button class="btnm2">
+        <div class="menuicon"></div>
+        <div class="menuicon"></div>
+        <div class="menuicon"></div>
+      </button></a>
 
       <div class="overlay" id="mobile-menu">
         <a onclick="closeNav()" class="close" href="">&times;</a>
@@ -73,8 +79,10 @@
 
         <a class="categorias" href="hamburguesas.html">
           <article class="plato">
+            
             <img src="Imagenes/categorias/hamburguesas/hamburguesa1-sin-borde.jpg" alt="Hamburguesa" />
             <h1>Hamburguesas</h1>
+          
           </article>
         </a>
 
