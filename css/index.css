@@ -8,10 +8,10 @@
 
 body{
   /* background-color: rgb(151, 10, 238); */
-  background-image: url(oso.gif );
+  /* background-image: url(oso.gif );
   background-size:15%;
-  background-repeat: repeat;
-  /* background-color: #FCF3CF; */
+  background-repeat: repeat; */
+  background-color: #FCF3CF;
 }
 img {
   width: 100%;
@@ -98,6 +98,17 @@ img {
   .navegacion {
     gap: 50px;
   }
+}
+
+.btnadministracion{
+  background-color: #4caf50;
+  color: #fff;
+  padding: 0px 15px;
+ 
+text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
 }
 .navegacion a {
   text-decoration: none;

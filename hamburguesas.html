@@ -1,88 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panes</title>
-    <!-- <link rel="stylesheet" href="normalize.css"> -->
-    <link rel="stylesheet" href="css/index.css" />
-  </head>
-  <body>
-    <div class="loader"></div>
-    <div class="contenedor">
-      <header class="header">
-        <div class="logo">
-          <a href="index.html">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panes</title>
+  <!-- <link rel="stylesheet" href="normalize.css"> -->
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <div class="loader"></div>
+  <div class="contenedor">
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
           <span>ANTOJITOS</span>
           <p>PANZA LLENA</p>
           <span>CORAZÓN CONTENTO</span>
         </a>
+      </div>
+
+      <nav class="menu">
+        <ul class="navegacion">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="hamburguesas.html">Hamburguesas</a></li>
+          <li><a href="preparados.html">Preparados</a></li>
+          <li><a href="horarios.html">Horarios</a></li>
+        </ul>
+      </nav>
+
+      <a onclick="openNav()" class="mm2"><button class="btnm2">
+          <div class="menuicon"></div>
+          <div class="menuicon"></div>
+          <div class="menuicon"></div>
+        </button></a>
+
+      <div class="overlay" id="mobile-menu">
+        <a onclick="closeNav()" class="close" href="">&times;</a>
+        <div class="overlay-content">
+          <a href="index.html">Inicio</a>
+          <a href="hamburguesas.html">Hamburguesas</a>
+          <a href="preparados.html">Preparados</a>
+          <a href="horarios.html">Horarios</a>
         </div>
+      </div>
+    </header>
+    <aside class="presentacion">
+      <div class="informacion">
+        <h1>Menu de panes, hamburguesas, hotdogs.</h1>
 
-        <nav class="menu">
-          <ul class="navegacion">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="hamburguesas.html">Hamburguesas</a></li>
-            <li><a href="preparados.html">Preparados</a></li>
-            <li><a href="horarios.html">Horarios</a></li>
-          </ul>
-        </nav>
-
-        <a onclick="openNav()" class="mm2"
-          ><button class="btnm2">
-            <div class="menuicon"></div>
-        <div class="menuicon"></div>
-        <div class="menuicon"></div>
-          </button></a
-        >
-
-        <div class="overlay" id="mobile-menu">
-          <a onclick="closeNav()" class="close" href="">&times;</a>
-          <div class="overlay-content">
-            <a href="index.html">Inicio</a>
-            <a href="hamburguesas.html">Hamburguesas</a>
-            <a href="preparados.html">Preparados</a>
-            <a href="horarios.html">Horarios</a>
-          </div>
-        </div>
-      </header>
-      <aside class="presentacion">
-        <div class="informacion">
-          <h1>Menu de panes, hamburguesas, hotdogs.</h1>
-
-          <!-- <div class="informacion--boton">
+        <!-- <div class="informacion--boton">
                     <button type="button">Explorar Comida</button>
                 </div> -->
-        </div>
-        <!-- <div class="presentacion--imagen">
+      </div>
+      <!-- <div class="presentacion--imagen">
           <img
             src="Imagenes/categorias/hamburguesas/hotdog-2-sin-borde.jpg"
             alt="Imagen presentacion"
           />
         </div> -->
-      </aside>
-     
-      <main class="comida">
-        <div class="platos">
-          <article class="plato">
-            <img
-              src="Imagenes/categorias/hamburguesas/hotdog-2-sin-borde.jpg"
-              alt="Hamburguesa"
-            />
-            <h1>HOT DOG</h1>
-            <p>
-              Hot Dog de salchichas con lechuga y repollo. Puedes pedirlo
-              acompañado con papas o puedes pedirlo simple.
-            </p>
-            <div class="plato--info">
-              <p>Sin papas: <span>Q10</span></p>
-              <hr />
-              <p>Con papas: <span>Q15</span></p>
-            </div>
-          </article>
+    </aside>
 
-          <article class="plato">
+    <main class="comida">
+      <div class="platos">
+        <article class="plato">
+          
+            <img src="Imagenes/no-image.png" alt="Hamburguesa" />
+            <h1>Cargando...</h1>
+            <p>Cargando...</p>
+            <div class="plato--info">
+              <p>Cargando...</p>
+            </div>
+            <br>
+         
+        </article>
+
+        <!-- <article class="plato">
             <img
               src="Imagenes/categorias/hamburguesas/hamburguesa1-sin-borde.jpg"
               alt="Hamburguesa"
@@ -97,19 +92,84 @@
               <hr />
               <p>Con papas: <span>Q15</span></p>
             </div>
-          </article>
-        </div>
-      </main>
-    </div>
-    <script type="text/javascript" src="js/scripts.js"></script>
+          </article> -->
+      </div>
+    </main>
+  </div>
+  <script type="text/javascript" src="js/scripts.js"></script>
 
-    <!-- Imagen de carga -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript">
-      $(window).load(function () {
-        $(".loader").fadeOut("slow");
-      });
-    </script>
-    <!-- imagen de carga -->
-  </body>
+  <!-- Imagen de carga -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(window).load(function () {
+      $(".loader").fadeOut("slow");
+    });
+  </script>
+  <!-- imagen de carga -->
+
+
+  <!-- Firebase -->
+  <!-- add firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-database-compat.js"></script>
+
+
+  <script>
+
+const firebaseConfig = {
+  databaseURL: "https://menu-panzallena-default-rtdb.firebaseio.com/"
+};
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+
+const dataContainer = document.querySelector('.platos');
+
+var fetchedData = database.ref('productos/');
+fetchedData.on('value', (snapshot) => {
+  var data = snapshot.val();
+
+  // Verificar si hay datos en la base de datos
+  if (!data || Object.keys(data).length === 0) {
+    dataContainer.innerHTML = '<p>No hay datos disponibles.</p>';
+    return;
+  }
+
+  // Insertar datos a la tabla
+  var htmlData = '';
+  for (var key in data) {
+    var value = data[key];
+
+
+    // Leer el campo 'mostrar' (ajusta el nombre del campo según tu estructura)
+    var categoria = value.categoria; // ajusta el nombre del campo según tu estructura
+
+    // Verificar el valor del campo 'mostrar'
+    if (value.categoria.toLowerCase() === 'hamburguesa') {
+      htmlData += `
+        <article class="plato">
+          <img src="${value.imagenurl}" alt="Hamburguesa" />
+          <h1>${value.nombre}</h1>
+          <p>${value.descripcion}</p>
+          <div class="plato--info">
+            <p>${value.precio}</p>
+          </div>
+          <br>
+        </article>`;
+    }
+    // Puedes agregar más lógica para diferentes valores de 'mostrar' si es necesario
+  }
+
+  // Verificar si no se encontraron tarjetas para mostrar
+  if (htmlData === '') {
+    dataContainer.innerHTML = '<p>No hay tarjetas para mostrar.</p>';
+  } else {
+    dataContainer.innerHTML = htmlData;
+  }
+});
+
+
+  </script>
+  <!-- Firebase -->
+</body>
+
 </html>

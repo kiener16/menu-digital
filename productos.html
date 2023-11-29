@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            display: grid;
+        }
+
+        /* .form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        } */
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+
+
+        /* cargar */
+
+        img {
+
+            width: 80px;
+        }
+
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: auto;
+            overflow: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+
+    <div class="container">
+        <div class="form">
+            <h1>Cargar productos</h1>
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" type="text" required>
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" required></textarea>
+            <label for="precio">Precio:</label>
+            <input id="precio" type="number" required>
+            <label for="imagenurl">URL de la imagen:</label>
+            <input id="imagenurl" type="url" required>
+            <label for="categoria">Categoría:</label>
+            <input id="categoria" type="text" required>
+            <button>Enviar</button>
+        </div>
+        <h1>Modificar productos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Preview Imagen</th>
+                    <th>Imagen URL</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                    <th>Categoria</th>
+                    <th>Acciones</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <!-- add Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-database-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            databaseURL: "https://menu-panzallena-default-rtdb.firebaseio.com/"
+        }
+        firebase.initializeApp(firebaseConfig)
+        const database = firebase.database()
+
+        // Al presionar enviar
+        const submit = document.querySelector('button')
+        submit.onclick = () => sendData()
+
+        function sendData() {
+            var nombre = document.getElementById('nombre').value;
+            var descripcion = document.getElementById('descripcion').value;
+            var precio = document.getElementById('precio').value;
+            var imagenurl = document.getElementById('imagenurl').value;
+            var categoria = document.getElementById('categoria').value;
+
+            // path data will storage
+            var listRef = database.ref('productos/')
+            var newRef = listRef.push()
+            newRef.set({
+                "nombre": nombre,
+                'descripcion': descripcion,
+                'precio': precio,
+                'imagenurl': imagenurl,
+                'categoria': categoria,
+            })
+        }
+
+
+
+        const dataContainer = document.querySelector('tbody')
+
+
+        var fetchedData = database.ref('productos/')
+        fetchedData.on('value', (snapshot) => {
+            var data = snapshot.val()
+
+            // insertar datos a la tabla
+            var htmlData = ''
+            for (var key in data) {
+                var value = data[key]
+                htmlData += `
+        <tr>
+            <td><img src="${value.imagenurl}"></td>
+            <td>${value.imagenurl}</td>
+            <td>${value.nombre}</td>
+            <td>${value.descripcion}</td>
+            <td>${value.precio}</td>
+            <td>${value.categoria}</td>
+            <td>
+                <button onclick="readyForUpdate('${key}', this)">Actualizar</button>
+                <button onclick="removeMess('${key}')">Eliminar</button>
+            </td>
+        </tr>
+        `;
+            }
+            dataContainer.innerHTML = htmlData
+        })
+
+        // Eliminar
+        function removeMess(uniqueId) {
+            database.ref('productos/' + uniqueId).remove()
+
+        }
+
+        //Actualizar
+        function readyForUpdate(uniqueId, elem) {
+            var siblingTd = elem.parentElement.parentElement.getElementsByTagName('td');
+
+            for (var i = 0; i < siblingTd.length - 1; i++) {
+                siblingTd[i].contentEditable = true;
+                siblingTd[i].classList.add('temp-update-class');
+            }
+
+            elem.setAttribute('onclick', `updateNow('${uniqueId}')`);
+            elem.innerHTML = 'Enviar';
+        }
+
+
+        function updateNow(uniqueId) {
+            var contentId = document.querySelectorAll('.temp-update-class')
+            var obj = {
+                'imagenurl': contentId[0].textContent,
+                'nombre': contentId[1].textContent,
+                'descripcion': contentId[2].textContent,
+                'precio': contentId[3].textContent,
+                'categoria': contentId[4].textContent,
+            }
+            var listRef = database.ref('productos/' + uniqueId)
+            listRef.update(obj)
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
